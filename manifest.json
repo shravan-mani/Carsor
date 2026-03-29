@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Carsor",
+  "version": "1.0.2",
+  "description": "Turns your cursor into a car with physics and skid marks. Fixed asset pathing.",
+  "icons": {
+    "128": "images/BMW M3_Cursor_Red.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Carsor Garage"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
